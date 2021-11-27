@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "ef78f9a0-8fb3-49a3-95ad-fdb11a80fd64",
+		"name": "Gestão do processo industrial - Venda SOAP",
+		"description": "\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inserirVenda",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <inserirVendaRequest xmlns=\"http://spring.io/guides/gs-producing-web-service\">\n      <venda>\n        <numeroNotaFiscal>334466</numeroNotaFiscal>\n        <nomeProduto>Tecido azul</nomeProduto>\n        <quantidadeProduto>34</quantidadeProduto>\n        <valorVenda>R$ 789,00</valorVenda>\n      </venda>\n    </inserirVendaRequest>\n  </soap:Body>\n</soap:Envelope>\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/ws",
+					"host": [
+						"gestaoprocessoindustrial-loadbalancer",
+						"tccdiogobarbosa",
+						"org"
+					],
+					"port": "8080",
+					"path": [
+						"ws"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "vendasPortSoap11BaseUrl",
+			"value": "http://localhost:8080",
+			"type": "any"
+		}
+	]
+}

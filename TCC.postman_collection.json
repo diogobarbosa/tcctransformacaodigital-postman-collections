@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "0e431cd5-deb1-40b9-b86d-cb7c37a267ac",
+		"name": "TCC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gestão de normas",
+			"item": [
+				{
+					"name": "Inserir Norma",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tituloNorma\" : \"Regulamentação de descarte de subprodutos. V14\",\r\n    \"textoNorma\" : \"De agordo com a norma 9999, todos os subprodutos devem ser manipulados com luvas e descartados em locais apropriados\",\r\n    \"regulamentacao\" : \"Artigo 123.2021\",\r\n    \"dataNorma\" : \"2021-03-29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaonormas-loadbalancer.tccdiogobarbosa.org:8080/normas",
+							"host": [
+								"gestaonormas-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"normas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Norma",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tituloNorma\" : \"Regulamentação de descarte de subprodutos Versão. V15\",\r\n    \"textoNorma\" : \"De agordo com a norma 9999, todos os subprodutos devem ser manipulados com luvas e descartados em locais apropriados\",\r\n    \"regulamentacao\" : \"Artigo 123.2021\",\r\n    \"dataNorma\" : \"2021-03-29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaonormas-loadbalancer.tccdiogobarbosa.org:8080/normas/ab679520-6f35-4b16-afcf-de8920822fd1",
+							"host": [
+								"gestaonormas-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"normas",
+								"ab679520-6f35-4b16-afcf-de8920822fd1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Norma",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaonormas-loadbalancer.tccdiogobarbosa.org:8080/normas/569cf6d5-ae3f-407c-b1eb-9b5fa88303d5",
+							"host": [
+								"gestaonormas-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"normas",
+								"569cf6d5-ae3f-407c-b1eb-9b5fa88303d5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Lista de Normas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaonormas-loadbalancer.tccdiogobarbosa.org:8080/normas",
+							"host": [
+								"gestaonormas-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"normas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Norma",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "gestaonormas-loadbalancer.tccdiogobarbosa.org:8080/normas/4f44d361-7a6f-400a-a731-9d2c87f6f7db",
+							"host": [
+								"gestaonormas-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"normas",
+								"4f44d361-7a6f-400a-a731-9d2c87f6f7db"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultorias e assessorias",
+			"item": [
+				{
+					"name": "Inserir Consultoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeConsultoria\" : \"Fibras e algodão LTDA. V5\",\r\n    \"cnpjConsultoria\" : \"55.555.420/0001-22\",\r\n    \"dataContratacao\" : \"2018-03-29\",\r\n    \"flagAtiva\" : \"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "consultoriasassessorias-loadbalancer.tccdiogobarbosa.org:8080/consultorias",
+							"host": [
+								"consultoriasassessorias-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"consultorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Consultoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "consultoriasassessorias-loadbalancer.tccdiogobarbosa.org:8080/consultorias/6bd683a1-a598-4948-aa32-819ae28cf42b",
+							"host": [
+								"consultoriasassessorias-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"consultorias",
+								"6bd683a1-a598-4948-aa32-819ae28cf42b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Lista de Consultorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "consultoriasassessorias-loadbalancer.tccdiogobarbosa.org:8080/consultorias",
+							"host": [
+								"consultoriasassessorias-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"consultorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Consultoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "consultoriasassessorias-loadbalancer.tccdiogobarbosa.org:8080/consultorias/fc15a59b-d18b-4396-8527-26d176581280",
+							"host": [
+								"consultoriasassessorias-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"consultorias",
+								"fc15a59b-d18b-4396-8527-26d176581280"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Consultoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeConsultoria\": \"Fibras e algodão LTDA. V13\",\r\n    \"cnpjConsultoria\": \"55.555.420/0001-22\",\r\n    \"dataContratacao\": \"2018-03-29\",\r\n    \"flagAtiva\": \"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "consultoriasassessorias-loadbalancer.tccdiogobarbosa.org:8080/consultorias/fc15a59b-d18b-4396-8527-26d176581280",
+							"host": [
+								"consultoriasassessorias-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"consultorias",
+								"fc15a59b-d18b-4396-8527-26d176581280"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gestão do processo industrial",
+			"item": [
+				{
+					"name": "Inserir Venda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroNotaFiscal\" : \"51080701212344000127550010000000981364112280\",\r\n    \"nomeProduto\" : \"Tecido reforçado V3\",\r\n    \"quantidadeProduto\" : \"3200\",\r\n    \"valorVenda\" : \"R$ 7.820,40\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/vendas",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Compra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroNotaFiscal\" : \"63080701212344000127550010000000981364112290\",\r\n    \"nomeProduto\" : \"Algodão V6\",\r\n    \"quantidadeProduto\" : \"11000\",\r\n    \"valorCompra\" : \"R$ 2.310,00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/compras",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"compras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Venda",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/vendas/0755ae7e-a7ce-419a-9df5-fe4d2a0c4d03",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"vendas",
+								"0755ae7e-a7ce-419a-9df5-fe4d2a0c4d03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Compra",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/compras/29d2d02e-afbd-42a3-819f-e5247bed2c0a",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"compras",
+								"29d2d02e-afbd-42a3-819f-e5247bed2c0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Lista de Vendas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/vendas",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Lista de Compras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/compras",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"compras"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Venda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/vendas/3cd38825-9283-4e47-beaf-d92fc007d139",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"vendas",
+								"3cd38825-9283-4e47-beaf-d92fc007d139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/compras/79cafd9a-801e-4fcd-8bca-837db6ae0f50",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"compras",
+								"79cafd9a-801e-4fcd-8bca-837db6ae0f50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Venda",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroNotaFiscal\": \"51080701212344000127550010000000981364112280\",\r\n    \"nomeProduto\": \"Tecido azul escuro\",\r\n    \"quantidadeProduto\": 34,\r\n    \"valorVenda\": \"R$ 789,00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/vendas/3cd38825-9283-4e47-beaf-d92fc007d139",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"vendas",
+								"3cd38825-9283-4e47-beaf-d92fc007d139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Compra",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroNotaFiscal\" : \"63080701212344000127550010000000981364112290\",\r\n    \"nomeProduto\" : \"Algodão V7\",\r\n    \"quantidadeProduto\" : \"11000\",\r\n    \"valorCompra\" : \"R$ 2.310,00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/compras/79cafd9a-801e-4fcd-8bca-837db6ae0f50",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"compras",
+								"79cafd9a-801e-4fcd-8bca-837db6ae0f50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Integração com gestão de normas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/integracao_normas",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"integracao_normas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Integração com consultorias e assessorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "gestaoprocessoindustrial-loadbalancer.tccdiogobarbosa.org:8080/integracao_consultorias",
+							"host": [
+								"gestaoprocessoindustrial-loadbalancer",
+								"tccdiogobarbosa",
+								"org"
+							],
+							"port": "8080",
+							"path": [
+								"integracao_consultorias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
